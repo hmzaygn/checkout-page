@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <title>Checkout Page</title>
+</head>
+
+<body>
+  <h1 class="text-center my-4">Shopping Cart</h1>
+  <main class="row">
+    <section class="col-12 col-md-6 ms-3">
+      <h3>Contact Infarmation</h3>
+      <form action="contact" class="mb-5">
+        <label for="mail">Email</label>
+        <div class="container-contact pb-3">
+          <input class="contact-info" type="email" name="mail" id="mail" placeholder="Enter Your Email..." required>
+          <i class="fa-solid fa-envelope icons"></i>
+        </div>
+
+        <label for="phone">Phone</label>
+        <div class="container-contact">
+          <input class="contact-info" type="number" name="phone" id="phone" placeholder="Enter Your Phone..." required>
+          <i class="fa-solid fa-phone icons"></i>
+        </div>
+      </form>
+
+      <h3 class="pb-3">Shipping Adress</h3>
+      <form action="shipping">
+        <label for="name">Full Name</label>
+        <div class="container-contact pb-3">
+          <input class="contact-info" type="text" name="name" id="name" placeholder="Enter Your Name..." required>
+          <i class="fas fa-user icons"></i>
+        </div>
+
+        <label for="adress">Adress</label>
+        <div class="container-contact pb-3">
+          <input class="contact-info" type="text" name="adress" id="adress" placeholder="Enter Your Adress..." required>
+          <i class="fa-solid fa-house icons"></i>
+        </div>
+
+        <label for="city">City</label>
+        <div class="container-contact pb-3">
+          <input class="contact-info" type="text" name="city" id="city" placeholder="Enter Your City..." required>
+          <i class="fa-solid fa-city icons"></i>
+        </div>
+
+        <div class="row mb-3">
+
+          <div class="col-4 ">
+            <label for="country">Country</label>
+            <div>
+              <i class="fa-solid fa-earth-asia icon-world"></i>
+              <select class="select" name="country" id="country">
+                <option value="turkey">Turkey</option>
+                <option value="usa">USA</option>
+                <option value="uk">UK</option>
+                <option value="france">France</option>
+              </select>
+            </div>
+          </div>
+
+
+          <div class="col-4">
+            <label for="postcode">Post Code</label>
+            <div>
+              <i class="fa-solid fa-envelopes-bulk icon-bulk"></i>
+              <input class="post-code" type="number" name="postcode" id="postcode"
+                placeholder="Enter Your Post Code...">
+            </div>
+          </div>
+        </div>
+
+        <input type="checkbox" name="check" id="check">
+        <label for="check">See this information next time</label>
+      </form>
+
+    </section>
+
+    <section class="col-12 col-md-5 ms-3">
+      <div id="products-preview">
+        <div id="product-painel">
+
+          <div id="first-item" class="product">
+            <img src="./img/photo1.png" alt="">
+            <div class="product-info">
+              <h2>Vintage Backpack</h2>
+              <p><strong>$ <span>54.99</span> </strong> <span class="line-through">$94.99</span></p>
+
+              <div class="quantity-controller">
+                <button>
+                  <i class="fas fa-minus"></i>
+                </button>
+                <p id="count1">1</p>
+                <button>
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+              <div>
+                <button class="rmv rmv-btn-1">REMOVE</button>
+              </div>
+              <p id="ptotal1">Product Total : $<span>54.99</span> </p>
+            </div>
+          </div>
+
+          <div id="second-item" class="product">
+            <img src="./img/photo2.png" alt="">
+            <div class="product-info">
+              <h2>Levi Shoes</h2>
+              <p><strong>$ <span>74.99</span> </strong> <span class="line-through">$124.99</span></p>
+
+              <div class="quantity-controller">
+                <button>
+                  <i class="fas fa-minus"></i>
+                </button>
+                <p id="count2">1</p>
+                <button>
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+              <div>
+                <button class="rmv rmv-btn-2">REMOVE</button>
+              </div>
+              <p id="ptotal2">Product Total : $<span>74.99</span> </p>
+            </div>
+          </div>
+
+          <div class="buy-detail" id="shipping">
+            <p>Shipping</p>
+            <p>$ <span>19</span> </p>
+          </div>
+          <div class="buy-detail" id="tax">
+            <p>Tax(18%)</p>
+            <p>$ <span>26.82</span></p>
+          </div>
+          <div class="buy-detail" id="total">
+            <p>Total</p>
+            <p id="result">$ <span>148.98</span> </p>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <button class="btn btn-warning">Continue</button>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+  </script>
+  <script src="app.js"></script>
+</body>
+
+</html>
